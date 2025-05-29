@@ -5,11 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Projet Git - Apprentissage</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .info-section {
+            display: none;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .toggle-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 20px 0;
+        }
+        .toggle-button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Bienvenue sur ma page de test Git / GitHub</h1>
+            <h1>Bienvenue sur ma page de test Git</h1>
         </header>
         <main>
             <section class="content">
@@ -20,6 +42,12 @@
                     <li>Un fichier CSS pour le style</li>
                     <li>Du contenu pour tester les commits</li>
                 </ul>
+                <button class="toggle-button" onclick="toggleInfo()">Afficher/Masquer les informations</button>
+                <div id="infoSection" class="info-section">
+                    <h3>Informations supplémentaires</h3>
+                    <p>Cette section peut être affichée ou masquée en cliquant sur le bouton ci-dessus.</p>
+                    <p>Cette fonctionnalité démontre l'utilisation de JavaScript pour rendre la page interactive.</p>
+                </div>
             </section>
             <section class="features">
                 <h2>Fonctionnalités</h2>
@@ -50,5 +78,15 @@
             <p>&copy; 2024 - Mon Projet Git - Tous droits réservés</p>
         </footer>
     </div>
+    <script>
+        function toggleInfo() {
+            const infoSection = document.getElementById('infoSection');
+            if (infoSection.style.display === 'none' || infoSection.style.display === '') {
+                infoSection.style.display = 'block';
+            } else {
+                infoSection.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html> 
